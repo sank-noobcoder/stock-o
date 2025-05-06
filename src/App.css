@@ -1,0 +1,121 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 0.5em rgba(100, 108, 255, 0.4));
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1em rgba(100, 108, 255, 0.8));
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1);
+}
+
+.stock-logo {
+  filter: drop-shadow(0 0 5px rgba(0, 162, 255, 0.6));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1em rgba(97, 218, 251, 0.8));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.read-the-docs {
+  color: #888;
+  font-style: italic;
+}
+
+/* Enhanced Link Animations */
+a.animated-link {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a.animated-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Button animations */
+.button-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: transform 0.7s;
+}
+
+.button-shine:hover::after {
+  transform: rotate(45deg) translate(100%, 100%);
+}
